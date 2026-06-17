@@ -1,0 +1,267 @@
+/* Now-IQ product page — scoped under .niq-root */
+.niq-root {
+  --niq-bg: #0d1117;
+  --niq-bg2: #111820;
+  --niq-bg3: #0a1020;
+  --niq-green: #6bbf3b;
+  --niq-green2: #a8e063;
+  --niq-teal: #00c7b1;
+  --niq-teal2: #00e5cc;
+  --niq-white: #ffffff;
+  --niq-muted: #8b9ab0;
+  --niq-border: rgba(107, 191, 59, 0.15);
+  --niq-border2: rgba(255, 255, 255, 0.06);
+
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  background: var(--niq-bg);
+  color: var(--niq-white);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+.niq-root * { box-sizing: border-box; }
+
+/* Logo header band */
+.niq-logo-band {
+  display: flex;
+  justify-content: center;
+  padding: 32px 24px 0;
+  background: var(--niq-bg);
+}
+.niq-logo-link {
+  display: inline-block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 28px rgba(107, 191, 59, 0.18));
+}
+.niq-logo-link:hover { transform: translateY(-2px) scale(1.02); filter: drop-shadow(0 0 36px rgba(107, 191, 59, 0.35)); }
+.niq-logo-link img { display: block; max-width: 420px; width: 100%; height: auto; animation: niq-logoFloat 6s ease-in-out infinite; }
+@keyframes niq-logoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Hero */
+.niq-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 48px 80px;
+  display: flex;
+  align-items: center;
+}
+.niq-hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(var(--niq-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--niq-border) 1px, transparent 1px);
+  background-size: 60px 60px; opacity: 0.4;
+}
+.niq-hero::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 25% 40%, rgba(107,191,59,0.08) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 50% at 75% 60%, rgba(0,199,177,0.06) 0%, transparent 65%);
+}
+.niq-hero-inner {
+  max-width: 1200px; margin: 0 auto; width: 100%;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  position: relative; z-index: 2;
+}
+
+.niq-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(107,191,59,0.1); border: 1px solid rgba(107,191,59,0.25);
+  color: var(--niq-green); font-size: 11px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; padding: 5px 14px; border-radius: 4px; margin-bottom: 24px;
+}
+.niq-eyebrow .niq-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--niq-green); animation: niq-pulse 2s infinite; }
+@keyframes niq-pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
+
+.niq-hero h1 {
+  font-size: 58px; font-weight: 800; letter-spacing: -2px; line-height: 1.05;
+  margin-bottom: 24px; color: #fff;
+}
+.niq-hl {
+  background: linear-gradient(90deg, var(--niq-green) 0%, var(--niq-teal) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.niq-lead { font-size: 18px; color: var(--niq-muted); line-height: 1.75; margin-bottom: 40px; max-width: 500px; }
+.niq-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 48px; }
+.niq-btn-primary {
+  display: inline-block; background: var(--niq-green); color: #0d1117;
+  padding: 14px 28px; border-radius: 6px; font-size: 15px; font-weight: 700;
+  text-decoration: none; transition: background 0.2s, transform 0.2s;
+}
+.niq-btn-primary:hover { background: var(--niq-green2); transform: translateY(-1px); }
+.niq-btn-ghost {
+  display: inline-block; background: transparent; color: var(--niq-white);
+  padding: 14px 28px; border-radius: 6px; font-size: 15px; font-weight: 600;
+  text-decoration: none; border: 1px solid var(--niq-border2); transition: border-color 0.2s;
+}
+.niq-btn-ghost:hover { border-color: rgba(107,191,59,0.4); color: var(--niq-green2); }
+
+.niq-trust { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.niq-trust-badge { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--niq-muted); font-weight: 500; }
+.niq-trust-badge svg { width: 14px; height: 14px; fill: var(--niq-green); opacity: 0.7; }
+.niq-trust-sep { width: 1px; height: 14px; background: var(--niq-border2); }
+
+/* Pipeline visual */
+.niq-visual {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--niq-border2);
+  border-radius: 16px; padding: 32px; position: relative; overflow: hidden;
+}
+.niq-visual::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--niq-green), var(--niq-teal));
+}
+.niq-visual-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--niq-muted); margin-bottom: 20px; display: flex; align-items: center; gap: 8px;
+}
+.niq-visual-label::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--niq-teal); }
+.niq-pv { display: flex; flex-direction: column; gap: 10px; }
+.niq-pv-stage { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--niq-border2); background: rgba(255,255,255,0.02); transition: border-color 0.2s; }
+.niq-pv-stage.niq-active { border-color: rgba(0,199,177,0.35); background: rgba(0,199,177,0.05); }
+.niq-pv-stage.niq-done   { border-color: rgba(107,191,59,0.3); background: rgba(107,191,59,0.04); }
+.niq-pv-stage.niq-pending { opacity: 0.45; }
+.niq-pv-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.niq-dot-done { background: var(--niq-green); box-shadow: 0 0 8px rgba(107,191,59,0.5); }
+.niq-dot-active { background: var(--niq-teal); box-shadow: 0 0 8px rgba(0,199,177,0.5); animation: niq-pulse 1.5s infinite; }
+.niq-dot-pending { background: #2a3a2a; border: 1px solid #3a5a3a; }
+.niq-pv-name { font-size: 13px; font-weight: 600; color: #ddd; flex: 1; }
+.niq-pv-status { font-size: 10px; font-weight: 700; letter-spacing: 0.5px; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; }
+.niq-status-done { background: rgba(107,191,59,0.15); color: var(--niq-green); }
+.niq-status-active { background: rgba(0,199,177,0.15); color: var(--niq-teal); }
+.niq-status-pending { background: rgba(255,255,255,0.05); color: #555; }
+
+.niq-visual-footer { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--niq-border2); display: flex; justify-content: space-between; align-items: center; }
+.niq-visual-footer-label { font-size: 11px; color: var(--niq-muted); }
+.niq-progress-wrap { width: 140px; height: 4px; background: #1a2a1a; border-radius: 2px; overflow: hidden; }
+.niq-progress-fill { height: 4px; border-radius: 2px; background: linear-gradient(90deg, var(--niq-green), var(--niq-teal)); width: 67%; animation: niq-progressShimmer 3s ease-in-out infinite; }
+@keyframes niq-progressShimmer { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+
+/* Stats */
+.niq-stats-bar { background: var(--niq-bg2); border-top: 1px solid var(--niq-border); border-bottom: 1px solid var(--niq-border); }
+.niq-stats-inner { max-width: 1200px; margin: 0 auto; padding: 0 48px; display: grid; grid-template-columns: repeat(4,1fr); }
+.niq-stat-item { padding: 32px 24px; text-align: center; border-right: 1px solid var(--niq-border2); position: relative; }
+.niq-stat-item:last-child { border-right: none; }
+.niq-stat-item::after { content: ""; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 0; height: 2px; background: var(--niq-green); transition: width 0.3s; }
+.niq-stat-item:hover::after { width: 48px; }
+.niq-stat-num {
+  font-size: 36px; font-weight: 900; letter-spacing: -1px;
+  background: linear-gradient(135deg, var(--niq-green2), var(--niq-teal));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  display: block; margin-bottom: 6px;
+}
+.niq-stat-label { font-size: 12px; color: var(--niq-muted); letter-spacing: 0.3px; }
+
+/* Section wrapper */
+.niq-section-wrap { max-width: 1200px; margin: 0 auto; padding: 100px 48px; }
+.niq-section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--niq-green); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.niq-section-eyebrow::before { content: ""; width: 20px; height: 2px; background: var(--niq-green); }
+.niq-section-title { font-size: 40px; font-weight: 800; letter-spacing: -1px; color: #fff; margin-bottom: 16px; line-height: 1.2; }
+.niq-section-sub { font-size: 17px; color: var(--niq-muted); max-width: 560px; line-height: 1.7; margin-bottom: 56px; }
+
+/* USP */
+.niq-usp-section { background: var(--niq-bg3); border-top: 1px solid var(--niq-border2); border-bottom: 1px solid var(--niq-border2); }
+.niq-usp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.niq-usp-text h2 { font-size: 38px; font-weight: 800; letter-spacing: -1px; color: #fff; margin-bottom: 20px; line-height: 1.15; }
+.niq-usp-text h2 em { font-style: normal; color: var(--niq-green2); }
+.niq-usp-text p { font-size: 16px; color: var(--niq-muted); line-height: 1.75; margin-bottom: 14px; }
+.niq-usp-card { background: rgba(255,255,255,0.02); border: 1px solid var(--niq-border); border-radius: 14px; padding: 36px; position: relative; overflow: hidden; }
+.niq-usp-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--niq-green), var(--niq-teal)); }
+.niq-usp-card blockquote { font-size: 19px; font-weight: 700; color: var(--niq-green2); line-height: 1.5; margin-bottom: 24px; border: none; padding: 0; }
+.niq-usp-checks { display: flex; flex-direction: column; gap: 12px; }
+.niq-usp-check { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--niq-muted); line-height: 1.55; }
+.niq-check-icon { width: 20px; height: 20px; border-radius: 50%; background: rgba(107,191,59,0.12); border: 1px solid rgba(107,191,59,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; font-size: 11px; color: var(--niq-green); font-weight: 700; }
+
+/* Features */
+.niq-features-section { background: var(--niq-bg); }
+.niq-features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.niq-feature-block { padding: 40px 36px; background: var(--niq-bg2); border: 1px solid var(--niq-border2); border-radius: 2px; position: relative; overflow: hidden; transition: border-color 0.25s, background 0.25s; }
+.niq-feature-block:hover { border-color: var(--niq-border); background: rgba(107,191,59,0.03); }
+.niq-feature-block::before { content: ""; position: absolute; top: 0; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, var(--niq-green), var(--niq-teal)); transition: width 0.3s; }
+.niq-feature-block:hover::before { width: 100%; }
+.niq-feature-num { font-size: 11px; font-weight: 800; color: var(--niq-green); opacity: 0.5; letter-spacing: 2px; margin-bottom: 14px; }
+.niq-feature-icon { font-size: 32px; margin-bottom: 16px; display: block; }
+.niq-feature-block h3 { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 10px; letter-spacing: -0.3px; }
+.niq-feature-block p { font-size: 14px; color: var(--niq-muted); line-height: 1.65; }
+
+/* Pipeline section */
+.niq-pipeline-section { background: var(--niq-bg3); border-top: 1px solid var(--niq-border2); border-bottom: 1px solid var(--niq-border2); position: relative; overflow: hidden; }
+.niq-pipeline-section::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(107,191,59,0.04) 0%, transparent 70%); }
+.niq-pipeline-steps { display: flex; align-items: flex-start; gap: 0; position: relative; margin-top: 56px; }
+.niq-pipeline-steps::before { content: ""; position: absolute; top: 28px; left: 28px; right: 28px; height: 2px; background: linear-gradient(90deg, var(--niq-green) 0%, var(--niq-teal) 60%, #1a2a1a 80%); z-index: 0; }
+.niq-pipeline-step { flex: 1; text-align: center; position: relative; z-index: 1; padding: 0 12px; }
+.niq-step-circle { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; margin: 0 auto 16px; position: relative; }
+.niq-step-done { background: rgba(107,191,59,0.15); border: 2px solid var(--niq-green); box-shadow: 0 0 16px rgba(107,191,59,0.2); }
+.niq-step-active { background: rgba(0,199,177,0.15); border: 2px solid var(--niq-teal); box-shadow: 0 0 20px rgba(0,199,177,0.3); animation: niq-pulse 2s infinite; }
+.niq-step-pending { background: rgba(255,255,255,0.03); border: 2px solid #2a3a2a; }
+.niq-step-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.niq-step-desc { font-size: 12px; color: var(--niq-muted); line-height: 1.55; }
+.niq-step-pending .niq-step-title { color: #445; }
+
+/* AI section */
+.niq-ai-section { background: var(--niq-bg); }
+.niq-ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.niq-ai-content h2 { font-size: 38px; font-weight: 800; letter-spacing: -1px; color: #fff; margin-bottom: 20px; line-height: 1.15; }
+.niq-ai-content h2 em { font-style: normal; color: var(--niq-teal); }
+.niq-ai-content p { font-size: 16px; color: var(--niq-muted); line-height: 1.75; margin-bottom: 16px; }
+.niq-ai-cards { display: flex; flex-direction: column; gap: 16px; }
+.niq-ai-card { display: flex; gap: 18px; align-items: flex-start; padding: 24px; background: rgba(255,255,255,0.02); border: 1px solid var(--niq-border2); border-radius: 12px; transition: border-color 0.2s; }
+.niq-ai-card:hover { border-color: var(--niq-border); }
+.niq-ai-card-icon { font-size: 26px; flex-shrink: 0; margin-top: 2px; }
+.niq-ai-card-text h4 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.niq-ai-card-text p { font-size: 13px; color: var(--niq-muted); line-height: 1.55; margin: 0; }
+.niq-ai-bar { height: 2px; border-radius: 2px; margin-top: 10px; animation: niq-barGrow 2.5s ease-out; }
+@keyframes niq-barGrow { from { transform: scaleX(0); transform-origin: left; } to { transform: scaleX(1); } }
+.niq-ab-green { background: linear-gradient(90deg, var(--niq-green), transparent); width: 80%; }
+.niq-ab-teal  { background: linear-gradient(90deg, var(--niq-teal), transparent); width: 65%; }
+.niq-ab-both  { background: linear-gradient(90deg, var(--niq-green), var(--niq-teal)); width: 90%; }
+
+/* ServiceNow */
+.niq-sn-section { background: linear-gradient(160deg, #091510 0%, var(--niq-bg3) 100%); border-top: 1px solid var(--niq-border); border-bottom: 1px solid var(--niq-border); }
+.niq-sn-inner { max-width: 1200px; margin: 0 auto; padding: 80px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.niq-sn-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(107,191,59,0.08); border: 1px solid var(--niq-border); color: var(--niq-green); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 5px 14px; border-radius: 4px; margin-bottom: 24px; }
+.niq-sn-text h2 { font-size: 36px; font-weight: 800; letter-spacing: -0.8px; color: #fff; margin-bottom: 16px; line-height: 1.2; }
+.niq-sn-text p { font-size: 16px; color: var(--niq-muted); line-height: 1.75; margin-bottom: 14px; }
+.niq-sn-tm { font-size: 12px; vertical-align: super; color: var(--niq-muted); }
+.niq-sn-modules-label { font-size: 12px; font-weight: 700; letter-spacing: 2px; color: var(--niq-muted); text-transform: uppercase; margin-bottom: 16px; }
+.niq-sn-modules { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.niq-sn-module { padding: 18px 20px; background: rgba(255,255,255,0.025); border: 1px solid var(--niq-border2); border-radius: 10px; font-size: 13px; font-weight: 600; color: #bbb; display: flex; align-items: center; gap: 10px; transition: border-color 0.2s; }
+.niq-sn-module:hover { border-color: var(--niq-border); color: var(--niq-green2); }
+.niq-sn-module-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--niq-green); flex-shrink: 0; opacity: 0.7; }
+
+/* CTA */
+.niq-cta-section { background: var(--niq-bg); position: relative; overflow: hidden; border-top: 1px solid var(--niq-border2); }
+.niq-cta-section::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--niq-border) 1px, transparent 1px), linear-gradient(90deg, var(--niq-border) 1px, transparent 1px); background-size: 60px 60px; opacity: 0.3; }
+.niq-cta-section::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 50% 100%, rgba(107,191,59,0.07) 0%, transparent 70%); }
+.niq-cta-inner { max-width: 720px; margin: 0 auto; padding: 110px 48px; text-align: center; position: relative; z-index: 1; }
+.niq-cta-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(107,191,59,0.08); border: 1px solid var(--niq-border); color: var(--niq-green); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 5px 14px; border-radius: 4px; margin-bottom: 28px; }
+.niq-cta-section h2 { font-size: 48px; font-weight: 900; letter-spacing: -2px; line-height: 1.05; color: #fff; margin-bottom: 20px; }
+.niq-cta-section h2 em { font-style: normal; color: var(--niq-green2); }
+.niq-cta-section p { font-size: 18px; color: var(--niq-muted); margin-bottom: 44px; line-height: 1.7; }
+.niq-cta-form { max-width: 480px; margin: 0 auto 32px; }
+.niq-cta-row { display: flex; border-radius: 8px; overflow: hidden; border: 1px solid var(--niq-border); box-shadow: 0 0 0 4px rgba(107,191,59,0.06); }
+.niq-cta-row input[type="email"] { flex: 1; background: rgba(255,255,255,0.04); border: none; outline: none; padding: 16px 20px; font-size: 15px; color: #fff; font-family: inherit; }
+.niq-cta-row input::placeholder { color: rgba(255,255,255,0.28); }
+.niq-cta-row button { background: var(--niq-green); border: none; color: #0d1117; font-weight: 800; font-size: 14px; letter-spacing: 0.3px; padding: 16px 28px; cursor: pointer; font-family: inherit; white-space: nowrap; transition: background 0.2s; }
+.niq-cta-row button:hover { background: var(--niq-green2); }
+.niq-cta-note { font-size: 14px; min-height: 22px; margin-top: 12px; font-weight: 600; color: var(--niq-green2); }
+.niq-cta-legal { font-size: 12px; color: rgba(255,255,255,0.2); margin-top: 8px; }
+.niq-cta-disclaimer { font-size: 12px; color: rgba(255,255,255,0.2); margin-top: 16px; }
+
+@media (max-width: 900px) {
+  .niq-hero-inner, .niq-usp-grid, .niq-ai-grid, .niq-sn-inner { grid-template-columns: 1fr; gap: 40px; }
+  .niq-hero { padding: 40px 24px 60px; }
+  .niq-hero h1 { font-size: 40px; }
+  .niq-visual { display: none; }
+  .niq-features-grid { grid-template-columns: 1fr; }
+  .niq-pipeline-steps { flex-wrap: wrap; justify-content: center; }
+  .niq-pipeline-steps::before { display: none; }
+  .niq-stats-inner { grid-template-columns: repeat(2,1fr); }
+  .niq-section-wrap { padding: 60px 24px; }
+  .niq-cta-section h2 { font-size: 34px; }
+  .niq-cta-inner { padding: 70px 24px; }
+  .niq-sn-inner { padding: 60px 24px; }
+}

@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="560" height="420">
+  <defs>
+
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   style="stop-color:#0d1117"/>
+      <stop offset="50%"  style="stop-color:#111820"/>
+      <stop offset="100%" style="stop-color:#0a0f14"/>
+    </linearGradient>
+
+    <linearGradient id="snGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   style="stop-color:#a8e063"/>
+      <stop offset="40%"  style="stop-color:#6bbf3b"/>
+      <stop offset="80%"  style="stop-color:#3d8b1a"/>
+      <stop offset="100%" style="stop-color:#2a6012"/>
+    </linearGradient>
+
+    <linearGradient id="snTeal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   style="stop-color:#00e5cc"/>
+      <stop offset="100%" style="stop-color:#00a896"/>
+    </linearGradient>
+
+    <radialGradient id="hexFill" cx="40%" cy="35%" r="65%">
+      <stop offset="0%"   style="stop-color:#162a1a"/>
+      <stop offset="60%"  style="stop-color:#0e1f12"/>
+      <stop offset="100%" style="stop-color:#091510"/>
+    </radialGradient>
+
+    <linearGradient id="nowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#c8d8c8"/>
+    </linearGradient>
+
+    <linearGradient id="iqGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   style="stop-color:#a8e063"/>
+      <stop offset="60%"  style="stop-color:#6bbf3b"/>
+      <stop offset="100%" style="stop-color:#3d8b1a"/>
+    </linearGradient>
+
+    <linearGradient id="dividerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   style="stop-color:transparent"/>
+      <stop offset="20%"  style="stop-color:#6bbf3b"/>
+      <stop offset="50%"  style="stop-color:#00c7b1"/>
+      <stop offset="80%"  style="stop-color:#6bbf3b"/>
+      <stop offset="100%" style="stop-color:transparent"/>
+    </linearGradient>
+
+    <filter id="greenGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="tealGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="hexGlow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="textGlow" x="-10%" y="-20%" width="120%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+  </defs>
+
+  <!-- ═══════ BACKGROUND ═══════ -->
+  <rect width="560" height="420" fill="url(#bgGrad)" rx="20"/>
+
+  <!-- Subtle green grid -->
+  <g stroke="#6bbf3b" stroke-width="0.4" opacity="0.05">
+    <line x1="0" y1="60"  x2="560" y2="60"/>
+    <line x1="0" y1="120" x2="560" y2="120"/>
+    <line x1="0" y1="180" x2="560" y2="180"/>
+    <line x1="0" y1="240" x2="560" y2="240"/>
+    <line x1="0" y1="300" x2="560" y2="300"/>
+    <line x1="0" y1="360" x2="560" y2="360"/>
+    <line x1="80"  y1="0" x2="80"  y2="420"/>
+    <line x1="160" y1="0" x2="160" y2="420"/>
+    <line x1="280" y1="0" x2="280" y2="420"/>
+    <line x1="400" y1="0" x2="400" y2="420"/>
+    <line x1="480" y1="0" x2="480" y2="420"/>
+  </g>
+
+  <!-- Ambient glow — centered -->
+  <ellipse cx="280" cy="130" rx="150" ry="110" fill="#6bbf3b" opacity="0.05"/>
+  <ellipse cx="280" cy="320" rx="200" ry="80"  fill="#00c7b1" opacity="0.04"/>
+
+  <!-- ═══════ HEXAGON BADGE — centered at (280, 128) ═══════ -->
+  <!-- Outer glow ring -->
+  <polygon points="243,56 317,56 355,128 317,200 243,200 205,128"
+           fill="none" stroke="#6bbf3b" stroke-width="2" opacity="0.12"
+           filter="url(#hexGlow)"/>
+  <!-- Main hex body -->
+  <polygon points="243,64 317,64 355,128 317,192 243,192 205,128"
+           fill="url(#hexFill)"/>
+  <!-- Green border -->
+  <polygon points="243,64 317,64 355,128 317,192 243,192 205,128"
+           fill="none" stroke="url(#snGreen)" stroke-width="2.5"/>
+  <!-- Inner ring -->
+  <polygon points="245,72 315,72 349,128 315,184 245,184 211,128"
+           fill="none" stroke="#6bbf3b" stroke-width="0.8" opacity="0.2"/>
+
+  <!-- ══ PIPELINE FLOW ICON inside hex — centered at x=280 ══ -->
+  <!-- Central spine -->
+  <line x1="280" y1="84"  x2="280" y2="170" stroke="#6bbf3b" stroke-width="2.2" opacity="0.65" stroke-linecap="round"/>
+
+  <!-- Node dots on spine -->
+  <circle cx="280" cy="92"  r="5" fill="url(#snGreen)" filter="url(#softGlow)"/>
+  <circle cx="280" cy="128" r="8" fill="url(#snGreen)" filter="url(#greenGlow)"/>
+  <circle cx="280" cy="162" r="5" fill="url(#snGreen)" filter="url(#softGlow)"/>
+
+  <!-- Left branches — green -->
+  <line x1="280" y1="92"  x2="251" y2="92"  stroke="#6bbf3b" stroke-width="1.6" opacity="0.5" stroke-linecap="round"/>
+  <line x1="280" y1="128" x2="245" y2="112" stroke="#6bbf3b" stroke-width="1.6" opacity="0.5" stroke-linecap="round"/>
+  <line x1="280" y1="128" x2="245" y2="144" stroke="#6bbf3b" stroke-width="1.6" opacity="0.5" stroke-linecap="round"/>
+  <line x1="280" y1="162" x2="251" y2="162" stroke="#6bbf3b" stroke-width="1.6" opacity="0.5" stroke-linecap="round"/>
+
+  <!-- Right branches — teal -->
+  <line x1="280" y1="92"  x2="309" y2="92"  stroke="#00c7b1" stroke-width="1.6" opacity="0.55" stroke-linecap="round"/>
+  <line x1="280" y1="128" x2="315" y2="112" stroke="#00c7b1" stroke-width="1.6" opacity="0.55" stroke-linecap="round"/>
+  <line x1="280" y1="128" x2="315" y2="144" stroke="#00c7b1" stroke-width="1.6" opacity="0.55" stroke-linecap="round"/>
+  <line x1="280" y1="162" x2="309" y2="162" stroke="#00c7b1" stroke-width="1.6" opacity="0.55" stroke-linecap="round"/>
+
+  <!-- Branch endpoint dots -->
+  <circle cx="251" cy="92"  r="3" fill="#6bbf3b" opacity="0.7"/>
+  <circle cx="245" cy="112" r="3" fill="#6bbf3b" opacity="0.7"/>
+  <circle cx="245" cy="144" r="3" fill="#6bbf3b" opacity="0.7"/>
+  <circle cx="251" cy="162" r="3" fill="#6bbf3b" opacity="0.7"/>
+  <circle cx="309" cy="92"  r="3" fill="#00c7b1" opacity="0.8" filter="url(#tealGlow)"/>
+  <circle cx="315" cy="112" r="3" fill="#00c7b1" opacity="0.8" filter="url(#tealGlow)"/>
+  <circle cx="315" cy="144" r="3" fill="#00c7b1" opacity="0.8" filter="url(#tealGlow)"/>
+  <circle cx="309" cy="162" r="3" fill="#00c7b1" opacity="0.8" filter="url(#tealGlow)"/>
+
+  <!-- Upward deploy arrow tip -->
+  <polygon points="280,76 274,90 286,90"
+           fill="url(#snGreen)" filter="url(#greenGlow)"/>
+
+  <!-- ═══════ WORDMARK — centered ═══════ -->
+  <!-- "NOW" — white -->
+  <text x="207" y="258"
+        font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="80" font-weight="800" letter-spacing="-3"
+        text-anchor="middle"
+        fill="url(#nowGrad)">NOW</text>
+
+  <!-- Teal dash separator -->
+  <text x="280" y="258"
+        font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="60" font-weight="300"
+        text-anchor="middle"
+        fill="url(#snTeal)" opacity="0.8">–</text>
+
+  <!-- "IQ" — green -->
+  <text x="362" y="258"
+        font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="80" font-weight="800" letter-spacing="-3"
+        text-anchor="middle"
+        fill="url(#iqGrad)"
+        filter="url(#textGlow)">IQ</text>
+
+  <!-- ═══════ DIVIDER ═══════ -->
+  <rect x="100" y="272" width="360" height="1.5" rx="1" fill="url(#dividerGrad)" opacity="0.5"/>
+
+  <!-- ═══════ TAGLINE — centered ═══════ -->
+  <text x="280" y="294"
+        font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="11" font-weight="600" letter-spacing="3"
+        text-anchor="middle"
+        fill="#6bbf3b" opacity="0.7">PROGRAM MANAGEMENT INTELLIGENCE</text>
+
+  <!-- ═══════ DEPLOYMENT PIPELINE BAR — centered ═══════ -->
+  <!-- Track: 300px wide centered at 280 = x:130 to 430 -->
+  <rect x="130" y="323" width="300" height="3" rx="1.5" fill="#1a2a1a" opacity="0.9"/>
+  <!-- Progress fill — 4 of 6 lit -->
+  <rect x="130" y="323" width="216" height="3" rx="1.5" fill="url(#snGreen)" opacity="0.65"/>
+  <!-- Nodes at equal spacing (60px apart) -->
+  <circle cx="130" cy="324" r="5.5" fill="#6bbf3b" stroke="#0d1117" stroke-width="2" filter="url(#softGlow)"/>
+  <circle cx="190" cy="324" r="5.5" fill="#6bbf3b" stroke="#0d1117" stroke-width="2" filter="url(#softGlow)"/>
+  <circle cx="250" cy="324" r="5.5" fill="#6bbf3b" stroke="#0d1117" stroke-width="2" filter="url(#softGlow)"/>
+  <circle cx="310" cy="324" r="5.5" fill="#6bbf3b" stroke="#0d1117" stroke-width="2" filter="url(#softGlow)"/>
+  <circle cx="370" cy="324" r="5.5" fill="#00c7b1" stroke="#0d1117" stroke-width="2" filter="url(#tealGlow)"/>
+  <circle cx="430" cy="324" r="5.5" fill="#1e2e1e" stroke="#3a5a3a" stroke-width="2"/>
+  <!-- Labels -->
+  <text x="130" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="8" font-weight="700" text-anchor="middle" fill="#6bbf3b" opacity="0.55" letter-spacing="0.3">PLAN</text>
+  <text x="190" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="8" font-weight="700" text-anchor="middle" fill="#6bbf3b" opacity="0.55" letter-spacing="0.3">BUILD</text>
+  <text x="250" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="8" font-weight="700" text-anchor="middle" fill="#6bbf3b" opacity="0.55" letter-spacing="0.3">TEST</text>
+  <text x="310" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="8" font-weight="700" text-anchor="middle" fill="#6bbf3b" opacity="0.55" letter-spacing="0.3">STAGE</text>
+  <text x="370" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="8" font-weight="700" text-anchor="middle" fill="#00c7b1" opacity="0.75" letter-spacing="0.3">DEPLOY</text>
+  <text x="430" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="8" font-weight="700" text-anchor="middle" fill="#3a5a3a" opacity="0.5" letter-spacing="0.3">UPGRADE</text>
+
+  <!-- ═══════ "BUILT FOR SERVICENOW™" BADGE — centered ═══════ -->
+  <rect x="168" y="360" width="224" height="26" rx="5"
+        fill="rgba(107,191,59,0.07)" stroke="rgba(107,191,59,0.22)" stroke-width="1"/>
+  <text x="280" y="377"
+        font-family="'Segoe UI',Arial,sans-serif"
+        font-size="10" font-weight="700" letter-spacing="1.5"
+        text-anchor="middle"
+        fill="#6bbf3b" opacity="0.68">BUILT FOR SERVICENOW&#8482;</text>
+
+  <!-- ═══════ CREDIT — centered ═══════ -->
+  <text x="280" y="406"
+        font-family="'Segoe UI',Arial,sans-serif"
+        font-size="9" font-weight="600" letter-spacing="2.5"
+        text-anchor="middle"
+        fill="#6bbf3b" opacity="0.28">A KINISIS LABS PRODUCT</text>
+
+</svg>

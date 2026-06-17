@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0018"/>
+      <stop offset="50%" style="stop-color:#0a0a20"/>
+      <stop offset="100%" style="stop-color:#0d0800"/>
+    </linearGradient>
+
+    <!-- Gold gradient for chalice and main elements -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff7d6"/>
+      <stop offset="25%" style="stop-color:#f5d877"/>
+      <stop offset="55%" style="stop-color:#c9a227"/>
+      <stop offset="100%" style="stop-color:#7a5c00"/>
+    </linearGradient>
+
+    <!-- Rainbow gradient for title text -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="20%" style="stop-color:#f5d877"/>
+      <stop offset="45%" style="stop-color:#ff9d3e"/>
+      <stop offset="70%" style="stop-color:#ff4fc8"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+
+    <!-- Purple glow gradient for accents -->
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c83fd"/>
+      <stop offset="100%" style="stop-color:#e040fb"/>
+    </linearGradient>
+
+    <!-- Glow filters -->
+    <filter id="goldGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="outerGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="titleGlow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="320" fill="url(#bgGrad)" rx="20"/>
+
+  <!-- Ambient glow blobs -->
+  <ellipse cx="120" cy="160" rx="100" ry="80" fill="#7c83fd" opacity="0.06"/>
+  <ellipse cx="480" cy="160" rx="100" ry="80" fill="#e040fb" opacity="0.06"/>
+  <ellipse cx="300" cy="260" rx="140" ry="60" fill="#c9a227" opacity="0.07"/>
+
+  <!-- ═══════ ORNATE BORDER FRAME ═══════ -->
+  <!-- Outer border -->
+  <rect x="14" y="14" width="572" height="292" rx="12"
+        fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.6"/>
+  <!-- Inner border -->
+  <rect x="22" y="22" width="556" height="276" rx="9"
+        fill="none" stroke="url(#goldGrad)" stroke-width="0.75" opacity="0.35"/>
+
+  <!-- Corner ornaments - Top Left -->
+  <g opacity="0.85" filter="url(#softGlow)">
+    <line x1="14" y1="40" x2="14" y2="14" stroke="url(#goldGrad)" stroke-width="2.5"/>
+    <line x1="14" y1="14" x2="40" y2="14" stroke="url(#goldGrad)" stroke-width="2.5"/>
+    <circle cx="28" cy="28" r="5" fill="none" stroke="#f5d877" stroke-width="1.5"/>
+    <circle cx="28" cy="28" r="2" fill="#f5d877"/>
+    <line x1="22" y1="34" x2="34" y2="22" stroke="#c9a227" stroke-width="0.75" opacity="0.5"/>
+  </g>
+  <!-- Corner ornaments - Top Right -->
+  <g opacity="0.85" filter="url(#softGlow)">
+    <line x1="586" y1="40" x2="586" y2="14" stroke="url(#goldGrad)" stroke-width="2.5"/>
+    <line x1="586" y1="14" x2="560" y2="14" stroke="url(#goldGrad)" stroke-width="2.5"/>
+    <circle cx="572" cy="28" r="5" fill="none" stroke="#f5d877" stroke-width="1.5"/>
+    <circle cx="572" cy="28" r="2" fill="#f5d877"/>
+    <line x1="578" y1="34" x2="566" y2="22" stroke="#c9a227" stroke-width="0.75" opacity="0.5"/>
+  </g>
+  <!-- Corner ornaments - Bottom Left -->
+  <g opacity="0.85" filter="url(#softGlow)">
+    <line x1="14" y1="280" x2="14" y2="306" stroke="url(#goldGrad)" stroke-width="2.5"/>
+    <line x1="14" y1="306" x2="40" y2="306" stroke="url(#goldGrad)" stroke-width="2.5"/>
+    <circle cx="28" cy="292" r="5" fill="none" stroke="#f5d877" stroke-width="1.5"/>
+    <circle cx="28" cy="292" r="2" fill="#f5d877"/>
+    <line x1="22" y1="286" x2="34" y2="298" stroke="#c9a227" stroke-width="0.75" opacity="0.5"/>
+  </g>
+  <!-- Corner ornaments - Bottom Right -->
+  <g opacity="0.85" filter="url(#softGlow)">
+    <line x1="586" y1="280" x2="586" y2="306" stroke="url(#goldGrad)" stroke-width="2.5"/>
+    <line x1="586" y1="306" x2="560" y2="306" stroke="url(#goldGrad)" stroke-width="2.5"/>
+    <circle cx="572" cy="292" r="5" fill="none" stroke="#f5d877" stroke-width="1.5"/>
+    <circle cx="572" cy="292" r="2" fill="#f5d877"/>
+    <line x1="578" y1="286" x2="566" y2="298" stroke="#c9a227" stroke-width="0.75" opacity="0.5"/>
+  </g>
+
+  <!-- Mid-border accent diamonds -->
+  <polygon points="300,14 306,20 300,26 294,20" fill="#c9a227" opacity="0.7"/>
+  <polygon points="300,294 306,300 300,306 294,300" fill="#c9a227" opacity="0.7"/>
+  <polygon points="14,160 20,154 26,160 20,166" fill="#c9a227" opacity="0.5"/>
+  <polygon points="574,160 580,154 586,160 580,166" fill="#c9a227" opacity="0.5"/>
+
+  <!-- ═══════ CHALICE ═══════ -->
+  <g transform="translate(68, 60)" filter="url(#outerGlow)">
+    <!-- Chalice glow halo -->
+    <ellipse cx="82" cy="100" rx="45" ry="45" fill="#c9a227" opacity="0.07"/>
+
+    <!-- Cup body -->
+    <path d="M52 30 Q44 65 38 90 Q35 108 82 112 Q129 108 126 90 Q120 65 112 30 Z"
+          fill="url(#goldGrad)" opacity="0.95"/>
+    <!-- Cup inner shadow -->
+    <path d="M56 32 Q50 65 44 88 Q42 104 82 107 Q122 104 120 88 Q114 65 108 32 Z"
+          fill="#5a3800" opacity="0.35"/>
+    <!-- Cup shine -->
+    <path d="M60 35 Q56 60 52 82" stroke="#fff7d6" stroke-width="2.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+
+    <!-- Chalice stem -->
+    <rect x="74" y="112" width="16" height="32" rx="4" fill="url(#goldGrad)"/>
+    <rect x="76" y="112" width="6" height="32" rx="3" fill="#fff7d6" opacity="0.25"/>
+
+    <!-- Base -->
+    <path d="M52 144 Q52 152 82 155 Q112 152 112 144 Z" fill="url(#goldGrad)"/>
+    <ellipse cx="82" cy="144" rx="30" ry="5" fill="url(#goldGrad)"/>
+    <!-- Base shine -->
+    <ellipse cx="74" cy="144" rx="12" ry="2.5" fill="#fff7d6" opacity="0.3"/>
+
+    <!-- Handles -->
+    <path d="M38 50 Q22 65 26 85 Q30 100 38 95" fill="none" stroke="url(#goldGrad)" stroke-width="7" stroke-linecap="round"/>
+    <path d="M126 50 Q142 65 138 85 Q134 100 126 95" fill="none" stroke="url(#goldGrad)" stroke-width="7" stroke-linecap="round"/>
+    <!-- Handle inner -->
+    <path d="M38 52 Q24 66 28 84 Q31 97 38 93" fill="none" stroke="#fff7d6" stroke-width="2.5" stroke-linecap="round" opacity="0.35"/>
+    <path d="M126 52 Q140 66 136 84 Q133 97 126 93" fill="none" stroke="#fff7d6" stroke-width="2.5" stroke-linecap="round" opacity="0.35"/>
+
+    <!-- Stars/sparkles around chalice -->
+    <g fill="#f5d877" opacity="0.9">
+      <!-- Top sparkle -->
+      <polygon points="82,8 84,14 90,14 85,18 87,24 82,20 77,24 79,18 74,14 80,14" transform="scale(0.7) translate(35,-4)"/>
+      <!-- Left sparkle small -->
+      <polygon points="20,70 21,73 24,73 22,75 23,78 20,76 17,78 18,75 16,73 19,73" opacity="0.7"/>
+      <!-- Right sparkle small -->
+      <polygon points="144,70 145,73 148,73 146,75 147,78 144,76 141,78 142,75 140,73 143,73" opacity="0.7"/>
+    </g>
+    <!-- Dot sparkles -->
+    <circle cx="30" cy="40" r="2" fill="#a78bfa" opacity="0.8"/>
+    <circle cx="134" cy="40" r="2" fill="#ff9d3e" opacity="0.8"/>
+    <circle cx="18" cy="110" r="1.5" fill="#f5d877" opacity="0.6"/>
+    <circle cx="146" cy="110" r="1.5" fill="#f5d877" opacity="0.6"/>
+    <circle cx="82" cy="0" r="3" fill="#fff7d6" opacity="0.5"/>
+  </g>
+
+  <!-- ═══════ WORDMARK ═══════ -->
+  <!-- "HOLYGRAILR" main title -->
+  <text x="300" y="148"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="62"
+        font-weight="bold"
+        letter-spacing="6"
+        text-anchor="middle"
+        fill="url(#titleGrad)"
+        filter="url(#titleGlow)">HOLYGRAILR</text>
+
+  <!-- Decorative line under title -->
+  <g>
+    <!-- Left line -->
+    <line x1="170" y1="162" x2="258" y2="162" stroke="url(#goldGrad)" stroke-width="1" opacity="0.5"/>
+    <!-- Diamond center -->
+    <polygon points="299,157 303,162 299,167 295,162" fill="#c9a227" opacity="0.85"/>
+    <!-- Right line -->
+    <line x1="341" y1="162" x2="430" y2="162" stroke="url(#goldGrad)" stroke-width="1" opacity="0.5"/>
+    <!-- Outer dots -->
+    <circle cx="166" cy="162" r="2" fill="#7c83fd" opacity="0.7"/>
+    <circle cx="434" cy="162" r="2" fill="#e040fb" opacity="0.7"/>
+  </g>
+
+  <!-- Tagline -->
+  <text x="300" y="190"
+        font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="13"
+        font-weight="600"
+        letter-spacing="4.5"
+        text-anchor="middle"
+        fill="url(#purpleGrad)"
+        opacity="0.9">THE ULTIMATE TCG MARKETPLACE</text>
+
+  <!-- Bottom rainbow accent bar -->
+  <defs>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:transparent"/>
+      <stop offset="15%" style="stop-color:#7c83fd"/>
+      <stop offset="35%" style="stop-color:#e040fb"/>
+      <stop offset="55%" style="stop-color:#ff4fc8"/>
+      <stop offset="75%" style="stop-color:#ff9d3e"/>
+      <stop offset="90%" style="stop-color:#f5d877"/>
+      <stop offset="100%" style="stop-color:transparent"/>
+    </linearGradient>
+  </defs>
+  <rect x="140" y="208" width="320" height="2" rx="1" fill="url(#barGrad)" opacity="0.6"/>
+
+  <!-- "A KINISIS LABS PRODUCT" footer text -->
+  <text x="300" y="240"
+        font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="9"
+        font-weight="600"
+        letter-spacing="3"
+        text-anchor="middle"
+        fill="#c9a227"
+        opacity="0.45">A KINISIS LABS PRODUCT</text>
+
+</svg>
