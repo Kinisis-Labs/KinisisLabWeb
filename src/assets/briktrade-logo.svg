@@ -1,0 +1,268 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320">
+  <defs>
+    <!-- Background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000a1a"/>
+      <stop offset="50%" style="stop-color:#0a0a00"/>
+      <stop offset="100%" style="stop-color:#001000"/>
+    </linearGradient>
+
+    <!-- Blue gradient for "Brik" -->
+    <linearGradient id="brikGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="30%" style="stop-color:#7dd3fc"/>
+      <stop offset="70%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+
+    <!-- Gold/orange gradient for "Trade" -->
+    <linearGradient id="tradeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef9c3"/>
+      <stop offset="30%" style="stop-color:#fde047"/>
+      <stop offset="70%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#b45309"/>
+    </linearGradient>
+
+    <!-- Rainbow for accent line -->
+    <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:transparent"/>
+      <stop offset="10%" style="stop-color:#3b82f6"/>
+      <stop offset="30%" style="stop-color:#22c55e"/>
+      <stop offset="50%" style="stop-color:#fde047"/>
+      <stop offset="70%" style="stop-color:#f97316"/>
+      <stop offset="90%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:transparent"/>
+    </linearGradient>
+
+    <!-- Brick red -->
+    <linearGradient id="redBrick" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fca5a5"/>
+      <stop offset="100%" style="stop-color:#dc2626"/>
+    </linearGradient>
+    <!-- Brick yellow -->
+    <linearGradient id="yellowBrick" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef08a"/>
+      <stop offset="100%" style="stop-color:#ca8a04"/>
+    </linearGradient>
+    <!-- Brick blue -->
+    <linearGradient id="blueBrick" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#93c5fd"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+
+    <!-- Coin gradient -->
+    <linearGradient id="coinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef9c3"/>
+      <stop offset="50%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#92400e"/>
+    </linearGradient>
+
+    <!-- Glows -->
+    <filter id="blueGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="goldGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="320" fill="url(#bgGrad)" rx="20"/>
+
+  <!-- Ambient glow blobs -->
+  <ellipse cx="100" cy="150" rx="120" ry="80" fill="#3b82f6" opacity="0.07"/>
+  <ellipse cx="500" cy="150" rx="120" ry="80" fill="#f59e0b" opacity="0.07"/>
+  <ellipse cx="300" cy="270" rx="160" ry="55" fill="#22c55e" opacity="0.06"/>
+
+  <!-- ═══════ ORNATE BORDER ═══════ -->
+  <rect x="14" y="14" width="572" height="292" rx="12"
+        fill="none" stroke="url(#rainbowGrad)" stroke-width="1.5" opacity="0.5"/>
+  <rect x="22" y="22" width="556" height="276" rx="9"
+        fill="none" stroke="url(#tradeGrad)" stroke-width="0.75" opacity="0.2"/>
+
+  <!-- Corner ornaments TL -->
+  <g opacity="0.9" filter="url(#softGlow)">
+    <line x1="14" y1="42" x2="14" y2="14" stroke="#3b82f6" stroke-width="2.5"/>
+    <line x1="14" y1="14" x2="42" y2="14" stroke="#3b82f6" stroke-width="2.5"/>
+    <circle cx="28" cy="28" r="5" fill="none" stroke="#7dd3fc" stroke-width="1.5"/>
+    <circle cx="28" cy="28" r="2" fill="#7dd3fc"/>
+  </g>
+  <!-- Corner TR -->
+  <g opacity="0.9" filter="url(#softGlow)">
+    <line x1="586" y1="42" x2="586" y2="14" stroke="#ef4444" stroke-width="2.5"/>
+    <line x1="586" y1="14" x2="558" y2="14" stroke="#ef4444" stroke-width="2.5"/>
+    <circle cx="572" cy="28" r="5" fill="none" stroke="#fca5a5" stroke-width="1.5"/>
+    <circle cx="572" cy="28" r="2" fill="#fca5a5"/>
+  </g>
+  <!-- Corner BL -->
+  <g opacity="0.9" filter="url(#softGlow)">
+    <line x1="14" y1="278" x2="14" y2="306" stroke="#22c55e" stroke-width="2.5"/>
+    <line x1="14" y1="306" x2="42" y2="306" stroke="#22c55e" stroke-width="2.5"/>
+    <circle cx="28" cy="292" r="5" fill="none" stroke="#86efac" stroke-width="1.5"/>
+    <circle cx="28" cy="292" r="2" fill="#86efac"/>
+  </g>
+  <!-- Corner BR -->
+  <g opacity="0.9" filter="url(#softGlow)">
+    <line x1="586" y1="278" x2="586" y2="306" stroke="#f59e0b" stroke-width="2.5"/>
+    <line x1="586" y1="306" x2="558" y2="306" stroke="#f59e0b" stroke-width="2.5"/>
+    <circle cx="572" cy="292" r="5" fill="none" stroke="#fde047" stroke-width="1.5"/>
+    <circle cx="572" cy="292" r="2" fill="#fde047"/>
+  </g>
+
+  <!-- Mid-border diamonds in brick colors -->
+  <polygon points="300,14 306,20 300,26 294,20" fill="#fde047" opacity="0.8"/>
+  <polygon points="300,294 306,300 300,306 294,300" fill="#fde047" opacity="0.8"/>
+  <polygon points="14,160 20,154 26,160 20,166" fill="#3b82f6" opacity="0.6"/>
+  <polygon points="574,160 580,154 586,160 580,166" fill="#ef4444" opacity="0.6"/>
+
+  <!-- ═══════ LEGO BRICKS (left side) ═══════ -->
+  <g transform="translate(42, 55)">
+    <!-- Bottom yellow brick -->
+    <rect x="0" y="60" width="80" height="30" rx="4" fill="url(#yellowBrick)"/>
+    <rect x="0" y="55" width="80" height="12" rx="4" fill="#fef08a" opacity="0.6"/>
+    <!-- Studs on yellow -->
+    <circle cx="18" cy="55" r="6" fill="url(#yellowBrick)" stroke="#fef9c3" stroke-width="1"/>
+    <circle cx="18" cy="55" r="3.5" fill="#fef9c3" opacity="0.5"/>
+    <circle cx="36" cy="55" r="6" fill="url(#yellowBrick)" stroke="#fef9c3" stroke-width="1"/>
+    <circle cx="36" cy="55" r="3.5" fill="#fef9c3" opacity="0.5"/>
+    <circle cx="54" cy="55" r="6" fill="url(#yellowBrick)" stroke="#fef9c3" stroke-width="1"/>
+    <circle cx="54" cy="55" r="3.5" fill="#fef9c3" opacity="0.5"/>
+    <circle cx="72" cy="55" r="6" fill="url(#yellowBrick)" stroke="#fef9c3" stroke-width="1"/>
+    <circle cx="72" cy="55" r="3.5" fill="#fef9c3" opacity="0.5"/>
+
+    <!-- Top red brick (offset) -->
+    <rect x="10" y="28" width="70" height="28" rx="4" fill="url(#redBrick)"/>
+    <rect x="10" y="23" width="70" height="12" rx="4" fill="#fca5a5" opacity="0.55"/>
+    <!-- Studs on red -->
+    <circle cx="26" cy="23" r="5.5" fill="url(#redBrick)" stroke="#fecaca" stroke-width="1"/>
+    <circle cx="26" cy="23" r="3" fill="#fecaca" opacity="0.5"/>
+    <circle cx="44" cy="23" r="5.5" fill="url(#redBrick)" stroke="#fecaca" stroke-width="1"/>
+    <circle cx="44" cy="23" r="3" fill="#fecaca" opacity="0.5"/>
+    <circle cx="62" cy="23" r="5.5" fill="url(#redBrick)" stroke="#fecaca" stroke-width="1"/>
+    <circle cx="62" cy="23" r="3" fill="#fecaca" opacity="0.5"/>
+
+    <!-- Blue brick bottom right -->
+    <rect x="55" y="60" width="55" height="26" rx="4" fill="url(#blueBrick)" opacity="0.9"/>
+    <circle cx="70" cy="60" r="5" fill="url(#blueBrick)" stroke="#bfdbfe" stroke-width="1"/>
+    <circle cx="70" cy="60" r="2.8" fill="#bfdbfe" opacity="0.5"/>
+    <circle cx="85" cy="60" r="5" fill="url(#blueBrick)" stroke="#bfdbfe" stroke-width="1"/>
+    <circle cx="85" cy="60" r="2.8" fill="#bfdbfe" opacity="0.5"/>
+    <circle cx="100" cy="60" r="5" fill="url(#blueBrick)" stroke="#bfdbfe" stroke-width="1"/>
+    <circle cx="100" cy="60" r="2.8" fill="#bfdbfe" opacity="0.5"/>
+  </g>
+
+  <!-- ═══════ COINS (right side) ═══════ -->
+  <!-- Coin 1 -->
+  <g transform="translate(490, 65)" filter="url(#goldGlow)">
+    <circle cx="22" cy="22" r="22" fill="url(#coinGrad)" opacity="0.95"/>
+    <circle cx="22" cy="22" r="17" fill="none" stroke="#fef9c3" stroke-width="1.5" opacity="0.4"/>
+    <text x="22" y="28" font-family="Georgia, serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#92400e">$</text>
+  </g>
+  <!-- Coin 2 (smaller) -->
+  <g transform="translate(450, 105)" filter="url(#goldGlow)">
+    <circle cx="15" cy="15" r="15" fill="url(#coinGrad)" opacity="0.8"/>
+    <text x="15" y="20" font-family="Georgia, serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#92400e">$</text>
+  </g>
+
+  <!-- ═══════ GREEN ARROW (growth) ═══════ -->
+  <g transform="translate(135, 62)" opacity="0.9" filter="url(#softGlow)">
+    <path d="M0 28 Q14 10 28 0" stroke="#22c55e" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <polygon points="28,0 18,4 24,12" fill="#22c55e"/>
+    <circle cx="0" cy="28" r="3" fill="#86efac"/>
+  </g>
+
+  <!-- ═══════ SPARKLES ═══════ -->
+  <!-- Multi-color sparkles scattered -->
+  <!-- Red sparkle -->
+  <g transform="translate(176, 72)" fill="#ef4444" opacity="0.9">
+    <polygon points="6,0 7,5 12,6 7,7 6,12 5,7 0,6 5,5"/>
+  </g>
+  <!-- Blue sparkle -->
+  <g transform="translate(430, 58)" fill="#3b82f6" opacity="0.85">
+    <polygon points="5,0 6,4 10,5 6,6 5,10 4,6 0,5 4,4"/>
+  </g>
+  <!-- Yellow sparkle -->
+  <g transform="translate(155, 195)" fill="#fde047" opacity="0.8">
+    <polygon points="5,0 6,4 10,5 6,6 5,10 4,6 0,5 4,4"/>
+  </g>
+  <!-- Green sparkle -->
+  <g transform="translate(448, 175)" fill="#22c55e" opacity="0.8">
+    <polygon points="4,0 5,3 8,4 5,5 4,8 3,5 0,4 3,3"/>
+  </g>
+  <!-- Small dots -->
+  <circle cx="170" cy="230" r="2.5" fill="#a78bfa" opacity="0.6"/>
+  <circle cx="440" cy="228" r="2.5" fill="#f97316" opacity="0.6"/>
+  <circle cx="180" cy="118" r="2" fill="#fbbf24" opacity="0.5"/>
+  <circle cx="420" cy="118" r="2" fill="#60a5fa" opacity="0.5"/>
+  <circle cx="158" cy="155" r="1.5" fill="#f87171" opacity="0.6"/>
+  <circle cx="448" cy="150" r="1.5" fill="#34d399" opacity="0.6"/>
+
+  <!-- ═══════ WORDMARK ═══════ -->
+  <!-- "Brik" - blue with white outline -->
+  <text x="299" y="152"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="68"
+        font-weight="bold"
+        letter-spacing="2"
+        text-anchor="middle"
+        stroke="#1e3a5f"
+        stroke-width="6"
+        paint-order="stroke"
+        fill="url(#brikGrad)"
+        filter="url(#blueGlow)">Brik</text>
+
+  <!-- "Trade" - gold/yellow with dark outline -->
+  <text x="299" y="218"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="68"
+        font-weight="bold"
+        letter-spacing="2"
+        text-anchor="middle"
+        stroke="#431407"
+        stroke-width="6"
+        paint-order="stroke"
+        fill="url(#tradeGrad)"
+        filter="url(#goldGlow)">Trade</text>
+
+  <!-- Price tag accent on "Trade" -->
+  <g transform="translate(412, 178)" opacity="0.85" filter="url(#softGlow)">
+    <rect x="0" y="0" width="28" height="22" rx="4" fill="url(#tradeGrad)" stroke="#431407" stroke-width="1.5"/>
+    <circle cx="6" cy="6" r="3" fill="#431407" opacity="0.6"/>
+    <line x1="6" y1="0" x2="6" y2="-8" stroke="#9ca3af" stroke-width="1.5"/>
+    <text x="17" y="16" font-family="Georgia, serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#431407">$</text>
+  </g>
+
+  <!-- Divider line -->
+  <line x1="185" y1="164" x2="415" y2="164"
+        stroke="url(#rainbowGrad)" stroke-width="1.5" opacity="0.45"/>
+
+  <!-- Tagline -->
+  <text x="300" y="248"
+        font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="11"
+        font-weight="700"
+        letter-spacing="4"
+        text-anchor="middle"
+        fill="#7dd3fc"
+        opacity="0.75">BUY · SELL · COLLECT · BUILD</text>
+
+  <!-- Rainbow bar -->
+  <rect x="140" y="258" width="320" height="2" rx="1" fill="url(#rainbowGrad)" opacity="0.55"/>
+
+  <!-- Credit -->
+  <text x="300" y="280"
+        font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="9"
+        font-weight="600"
+        letter-spacing="3"
+        text-anchor="middle"
+        fill="#f59e0b"
+        opacity="0.4">A KINISIS LABS PRODUCT</text>
+
+</svg>
