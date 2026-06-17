@@ -5,7 +5,10 @@ export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
       { title: "Privacy Policy — Kinisis Labs" },
-      { name: "description", content: "How Kinisis Labs collects, uses, and protects your information." },
+      {
+        name: "description",
+        content: "How Kinisis Labs collects, uses, and protects your information.",
+      },
     ],
   }),
   component: PrivacyPage,
@@ -13,7 +16,15 @@ export const Route = createFileRoute("/privacy")({
 
 const PRIVACY_EMAIL = "privacy@kinisislabs.com";
 
-function Section({ num, title, children }: { num?: number; title?: string; children: React.ReactNode }) {
+function Section({
+  num,
+  title,
+  children,
+}: {
+  num?: number;
+  title?: string;
+  children: React.ReactNode;
+}) {
   return (
     <div className="rounded-xl border border-border/80 bg-card/60 p-8 backdrop-blur space-y-3 text-muted-foreground leading-relaxed">
       {title && (
@@ -39,7 +50,9 @@ function PrivacyPage() {
         {/* Hero */}
         <section className="px-6 py-16 text-center" style={{ background: "var(--gradient-hero)" }}>
           <h1 className="text-5xl font-semibold tracking-tight">Privacy Policy</h1>
-          <p className="mt-3 text-muted-foreground">How we collect, use, and protect your information</p>
+          <p className="mt-3 text-muted-foreground">
+            How we collect, use, and protect your information
+          </p>
           <div className="mt-5 inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1 text-xs font-semibold text-primary">
             Last updated: May 8, 2026
           </div>
@@ -51,7 +64,9 @@ function PrivacyPage() {
               Kinisis Labs ("we," "us," or "our") is committed to protecting your privacy. This
               Privacy Policy explains how we collect, use, disclose, and safeguard your information
               when you use our applications and website at{" "}
-              <a className="text-primary hover:underline" href="https://kinisislabs.com">kinisislabs.com</a>{" "}
+              <a className="text-primary hover:underline" href="https://kinisislabs.com">
+                kinisislabs.com
+              </a>{" "}
               (collectively, the "Service").
             </p>
             <p>
@@ -67,7 +82,9 @@ function PrivacyPage() {
             <ul className="list-disc pl-6 space-y-1">
               <li>Email address (used to create and identify your account)</li>
               <li>Username or display name (if provided)</li>
-              <li>Password (stored in hashed/encrypted form — we never store plain-text passwords)</li>
+              <li>
+                Password (stored in hashed/encrypted form — we never store plain-text passwords)
+              </li>
             </ul>
             <p className="font-semibold text-foreground">Usage Information</p>
             <ul className="list-disc pl-6 space-y-1">
@@ -105,14 +122,14 @@ function PrivacyPage() {
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong className="text-foreground">Service Providers:</strong> Trusted infrastructure
-                providers (e.g. cloud hosting) who process data solely on our behalf and under strict
-                confidentiality agreements.
+                <strong className="text-foreground">Service Providers:</strong> Trusted
+                infrastructure providers (e.g. cloud hosting) who process data solely on our behalf
+                and under strict confidentiality agreements.
               </li>
               <li>
-                <strong className="text-foreground">Legal Requirements:</strong> When required by law,
-                court order, or governmental authority, or to protect the rights and safety of our
-                users and the public.
+                <strong className="text-foreground">Legal Requirements:</strong> When required by
+                law, court order, or governmental authority, or to protect the rights and safety of
+                our users and the public.
               </li>
               <li>
                 <strong className="text-foreground">Business Transfer:</strong> In the event of a
@@ -126,8 +143,8 @@ function PrivacyPage() {
             <p>
               We retain your personal information for as long as your account is active or as needed
               to provide the Service. If you delete your account, we will delete or anonymize your
-              personal data within <strong className="text-foreground">30 days</strong>, except where
-              we are required to retain it for legal or compliance purposes.
+              personal data within <strong className="text-foreground">30 days</strong>, except
+              where we are required to retain it for legal or compliance purposes.
             </p>
           </Section>
 
@@ -150,19 +167,42 @@ function PrivacyPage() {
           </Section>
 
           <Section num={6} title="Your Rights">
-            <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+            <p>
+              Depending on your location, you may have the following rights regarding your personal
+              data:
+            </p>
             <ul className="list-disc pl-6 space-y-1">
-              <li><strong className="text-foreground">Access:</strong> Request a copy of the personal data we hold about you</li>
-              <li><strong className="text-foreground">Correction:</strong> Request correction of inaccurate or incomplete data</li>
-              <li><strong className="text-foreground">Deletion:</strong> Request deletion of your personal data ("right to be forgotten")</li>
-              <li><strong className="text-foreground">Portability:</strong> Request a machine-readable export of your data</li>
-              <li><strong className="text-foreground">Objection:</strong> Object to certain types of data processing</li>
-              <li><strong className="text-foreground">Withdrawal of Consent:</strong> Withdraw consent at any time where processing is based on consent</li>
+              <li>
+                <strong className="text-foreground">Access:</strong> Request a copy of the personal
+                data we hold about you
+              </li>
+              <li>
+                <strong className="text-foreground">Correction:</strong> Request correction of
+                inaccurate or incomplete data
+              </li>
+              <li>
+                <strong className="text-foreground">Deletion:</strong> Request deletion of your
+                personal data ("right to be forgotten")
+              </li>
+              <li>
+                <strong className="text-foreground">Portability:</strong> Request a machine-readable
+                export of your data
+              </li>
+              <li>
+                <strong className="text-foreground">Objection:</strong> Object to certain types of
+                data processing
+              </li>
+              <li>
+                <strong className="text-foreground">Withdrawal of Consent:</strong> Withdraw consent
+                at any time where processing is based on consent
+              </li>
             </ul>
             <p>
               To exercise any of these rights, please contact us at{" "}
-              <a className="text-primary hover:underline" href={`mailto:${PRIVACY_EMAIL}`}>{PRIVACY_EMAIL}</a>.
-              We will respond within 30 days.
+              <a className="text-primary hover:underline" href={`mailto:${PRIVACY_EMAIL}`}>
+                {PRIVACY_EMAIL}
+              </a>
+              . We will respond within 30 days.
             </p>
           </Section>
 
@@ -172,7 +212,9 @@ function PrivacyPage() {
               under local law). We do not knowingly collect personal information from children. If
               you believe we have inadvertently collected information from a child, please contact
               us immediately at{" "}
-              <a className="text-primary hover:underline" href={`mailto:${PRIVACY_EMAIL}`}>{PRIVACY_EMAIL}</a>{" "}
+              <a className="text-primary hover:underline" href={`mailto:${PRIVACY_EMAIL}`}>
+                {PRIVACY_EMAIL}
+              </a>{" "}
               and we will delete it promptly.
             </p>
           </Section>
@@ -198,10 +240,16 @@ function PrivacyPage() {
           </Section>
 
           {/* Contact card */}
-          <div className="rounded-xl p-10 text-center" style={{ background: "var(--gradient-accent)" }}>
-            <h2 className="text-2xl font-semibold text-primary-foreground">Questions or Requests?</h2>
+          <div
+            className="rounded-xl p-10 text-center"
+            style={{ background: "var(--gradient-accent)" }}
+          >
+            <h2 className="text-2xl font-semibold text-primary-foreground">
+              Questions or Requests?
+            </h2>
             <p className="mt-2 text-primary-foreground/80">
-              If you have any questions about this Privacy Policy or wish to exercise your data rights, reach out to us directly.
+              If you have any questions about this Privacy Policy or wish to exercise your data
+              rights, reach out to us directly.
             </p>
             <a
               href={`mailto:${PRIVACY_EMAIL}`}
@@ -210,7 +258,6 @@ function PrivacyPage() {
               {PRIVACY_EMAIL}
             </a>
           </div>
-
         </div>
       </main>
       <SiteFooter />

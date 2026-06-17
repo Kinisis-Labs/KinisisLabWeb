@@ -15,8 +15,7 @@ export const Route = createFileRoute("/products/holygrailr")({
       { property: "og:title", content: "HolyGrailR — The Ultimate TCG Marketplace" },
       {
         property: "og:description",
-        content:
-          "The first all-in-one platform for Trading Card Game collectors and players.",
+        content: "The first all-in-one platform for Trading Card Game collectors and players.",
       },
     ],
   }),
@@ -53,7 +52,9 @@ function SignupForm({ ctaLabel, large = false }: { ctaLabel: string; large?: boo
       <p className="hg-signup-note" style={{ color: msg.color || undefined }}>
         {msg.text}
       </p>
-      <p className="hg-signup-legal">No spam. Just one email when we launch. Unsubscribe anytime.</p>
+      <p className="hg-signup-legal">
+        No spam. Just one email when we launch. Unsubscribe anytime.
+      </p>
     </form>
   );
 }
@@ -70,12 +71,14 @@ function HolyGrailrPage() {
             <h1>HolyGrailR</h1>
             <p className="hg-tagline">The Ultimate TCG Marketplace</p>
             <p className="hg-lead">
-              The first all-in-one platform for Trading Card Game collectors and players.
-              Buy, sell, manage your collection, and connect with the community — all in one place.
+              The first all-in-one platform for Trading Card Game collectors and players. Buy, sell,
+              manage your collection, and connect with the community — all in one place.
             </p>
             <SignupForm ctaLabel="Notify Me at Launch" />
             <div style={{ marginTop: 20 }}>
-              <a href="#features" className="hg-btn-secondary">See Features</a>
+              <a href="#features" className="hg-btn-secondary">
+                See Features
+              </a>
             </div>
           </div>
         </div>
@@ -106,11 +109,15 @@ function HolyGrailrPage() {
         <div className="hg-usp-strip">
           <div className="hg-usp-inner">
             <div className="hg-usp-text">
-              <h2>The TCG world was fragmented.<br />We fixed it.</h2>
+              <h2>
+                The TCG world was fragmented.
+                <br />
+                We fixed it.
+              </h2>
               <p>
-                Until now, collectors and players had to juggle multiple apps just to manage their hobby —
-                one app to track their collection, another to buy and sell cards, and yet another to connect
-                with fellow enthusiasts.
+                Until now, collectors and players had to juggle multiple apps just to manage their
+                hobby — one app to track their collection, another to buy and sell cards, and yet
+                another to connect with fellow enthusiasts.
               </p>
               <p>
                 HolyGrailR changes everything. We built the platform TCG fans have always deserved:
@@ -118,8 +125,14 @@ function HolyGrailrPage() {
               </p>
             </div>
             <div className="hg-usp-highlight">
-              <p>"The first in-app marketplace and community space built specifically for TCG — all in one."</p>
-              <p className="hg-sub">No more app-switching. No more fragmented experiences. Everything you need to collect, trade, and connect lives right here.</p>
+              <p>
+                "The first in-app marketplace and community space built specifically for TCG — all
+                in one."
+              </p>
+              <p className="hg-sub">
+                No more app-switching. No more fragmented experiences. Everything you need to
+                collect, trade, and connect lives right here.
+              </p>
             </div>
           </div>
         </div>
@@ -129,38 +142,59 @@ function HolyGrailrPage() {
           <div className="hg-section-wrap">
             <div className="hg-section-label">What You Can Do</div>
             <h2 className="hg-section-title">Everything a TCG fan needs</h2>
-            <p className="hg-section-sub">Whether you're a casual collector or a serious trader, HolyGrailR has the tools to level up your game.</p>
+            <p className="hg-section-sub">
+              Whether you're a casual collector or a serious trader, HolyGrailR has the tools to
+              level up your game.
+            </p>
 
             <div className="hg-features-grid">
               <div className="hg-feature-card hg-fc-gold">
                 <span className="hg-feature-icon">🃏</span>
                 <h3>Collection Manager</h3>
-                <p>Upload and organize your entire card collection in one place. Track condition, set, rarity, and value with ease. Your binder — digitized.</p>
+                <p>
+                  Upload and organize your entire card collection in one place. Track condition,
+                  set, rarity, and value with ease. Your binder — digitized.
+                </p>
               </div>
               <div className="hg-feature-card hg-fc-orange">
                 <span className="hg-feature-icon">🏪</span>
                 <h3>In-App Marketplace</h3>
-                <p>Buy and sell cards directly within the app. No redirects, no third-party checkout — the first true TCG marketplace built into the platform itself.</p>
+                <p>
+                  Buy and sell cards directly within the app. No redirects, no third-party checkout
+                  — the first true TCG marketplace built into the platform itself.
+                </p>
               </div>
               <div className="hg-feature-card hg-fc-purple">
                 <span className="hg-feature-icon">🤖</span>
                 <h3>AI-Powered Pricing</h3>
-                <p>Let intelligent pricing do the work. Our AI analyzes real market data to give you accurate, up-to-date valuations for buying and selling.</p>
+                <p>
+                  Let intelligent pricing do the work. Our AI analyzes real market data to give you
+                  accurate, up-to-date valuations for buying and selling.
+                </p>
               </div>
               <div className="hg-feature-card hg-fc-blue">
                 <span className="hg-feature-icon">💬</span>
                 <h3>Community Boards</h3>
-                <p>Connect with TCG fans, share your pulls, debate meta, and swap knowledge on dedicated community boards. Your people are here.</p>
+                <p>
+                  Connect with TCG fans, share your pulls, debate meta, and swap knowledge on
+                  dedicated community boards. Your people are here.
+                </p>
               </div>
               <div className="hg-feature-card hg-fc-green">
                 <span className="hg-feature-icon">📈</span>
                 <h3>Portfolio Tracking</h3>
-                <p>Watch the value of your collection grow in real time. Know what you own, what it's worth, and when it's time to sell.</p>
+                <p>
+                  Watch the value of your collection grow in real time. Know what you own, what it's
+                  worth, and when it's time to sell.
+                </p>
               </div>
               <div className="hg-feature-card hg-fc-pink">
                 <span className="hg-feature-icon">🔍</span>
                 <h3>Search & Discovery</h3>
-                <p>Find any card across any set with powerful search and filtering. Browse listings or build your want list for easy hunting.</p>
+                <p>
+                  Find any card across any set with powerful search and filtering. Browse listings
+                  or build your want list for easy hunting.
+                </p>
               </div>
             </div>
           </div>
@@ -177,10 +211,14 @@ function HolyGrailrPage() {
               <div className="hg-ai-orb hg-ai-orb-3" />
             </div>
             <div className="hg-ai-badge">⚡ AI Intelligence</div>
-            <h2>Pricing that keeps up<br />with the market</h2>
+            <h2>
+              Pricing that keeps up
+              <br />
+              with the market
+            </h2>
             <p>
-              Card values shift constantly. Our AI pricing engine continuously analyzes market trends
-              and recent sales so every listing and purchase is grounded in real data —
+              Card values shift constantly. Our AI pricing engine continuously analyzes market
+              trends and recent sales so every listing and purchase is grounded in real data —
               giving buyers confidence and sellers the best possible returns.
             </p>
           </div>
@@ -190,7 +228,10 @@ function HolyGrailrPage() {
         <div className="hg-section-wrap">
           <div className="hg-section-label">Availability</div>
           <h2 className="hg-section-title">Play anywhere</h2>
-          <p className="hg-section-sub">HolyGrailR is launching soon across web, iOS, and Android. Be the first to know when we go live.</p>
+          <p className="hg-section-sub">
+            HolyGrailR is launching soon across web, iOS, and Android. Be the first to know when we
+            go live.
+          </p>
 
           <div className="hg-platform-row">
             <div className="hg-platform-pill">
@@ -225,10 +266,16 @@ function HolyGrailrPage() {
 
         {/* CTA */}
         <div className="hg-cta-section">
-          <h2>Your collection<br />deserves a home.</h2>
+          <h2>
+            Your collection
+            <br />
+            deserves a home.
+          </h2>
           <p>Be among the first to experience the hobby the way it was meant to be.</p>
           <SignupForm ctaLabel="Get Early Access" large />
-          <p className="hg-cta-from">A product by Kinisis Labs — Built for collectors, by builders.</p>
+          <p className="hg-cta-from">
+            A product by Kinisis Labs — Built for collectors, by builders.
+          </p>
         </div>
       </main>
       <SiteFooter />

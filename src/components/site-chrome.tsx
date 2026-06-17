@@ -75,8 +75,7 @@ export function SiteHeader() {
                 onClick={() => setOpen(false)}
                 className="rounded-md px-3 py-3 text-muted-foreground transition-colors hover:bg-accent/30 hover:text-foreground"
                 activeProps={{
-                  className:
-                    "rounded-md px-3 py-3 text-foreground font-medium bg-accent/20",
+                  className: "rounded-md px-3 py-3 text-foreground font-medium bg-accent/20",
                 }}
               >
                 {item.label}

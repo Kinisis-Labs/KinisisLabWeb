@@ -5,7 +5,11 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Kinisis Labs — Engineering motion into intelligent systems" },
-      { name: "description", content: "Kinisis Labs builds intelligent systems and engineering tools that turn motion into insight." },
+      {
+        name: "description",
+        content:
+          "Kinisis Labs builds intelligent systems and engineering tools that turn motion into insight.",
+      },
     ],
   }),
   component: Index,
@@ -35,7 +39,10 @@ function Index() {
             { t: "Velocity", d: "Small team, modern tooling, shipping at startup pace." },
             { t: "Clarity", d: "Software that explains itself to the people who depend on it." },
           ].map((f) => (
-            <div key={f.t} className="rounded-xl border border-border/80 bg-card/60 p-6 backdrop-blur">
+            <div
+              key={f.t}
+              className="rounded-xl border border-border/80 bg-card/60 p-6 backdrop-blur"
+            >
               <h3 className="text-lg font-semibold">{f.t}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{f.d}</p>
             </div>
@@ -43,7 +50,6 @@ function Index() {
         </section>
       </main>
       <SiteFooter />
-      
     </div>
   );
 }

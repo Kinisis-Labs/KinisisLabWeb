@@ -87,64 +87,160 @@ export function SplashScreen() {
 
         <g className="kl-symbol">
           <circle r="108" fill="none" stroke="#1e2240" strokeWidth="1" className="kl-draw-slow" />
-          <circle r="88"  fill="none" stroke="#2a2d45" strokeWidth="0.5" className="kl-draw-slow" />
-          <circle r="66"  fill="none" stroke="#2a2d45" strokeWidth="0.5" className="kl-draw" />
-          <circle r="44"  fill="none" stroke="#2a2d45" strokeWidth="0.5" className="kl-draw" />
+          <circle r="88" fill="none" stroke="#2a2d45" strokeWidth="0.5" className="kl-draw-slow" />
+          <circle r="66" fill="none" stroke="#2a2d45" strokeWidth="0.5" className="kl-draw" />
+          <circle r="44" fill="none" stroke="#2a2d45" strokeWidth="0.5" className="kl-draw" />
 
-          <line x1="0" y1="0" x2="0"   y2="-108" stroke="#3a3f6e" strokeWidth="0.75" className="kl-draw" />
-          <line x1="0" y1="0" x2="94"  y2="-54"  stroke="#3a3f6e" strokeWidth="0.75" className="kl-draw" />
-          <line x1="0" y1="0" x2="94"  y2="54"   stroke="#3a3f6e" strokeWidth="0.75" className="kl-draw" />
-          <line x1="0" y1="0" x2="0"   y2="108"  stroke="#3a3f6e" strokeWidth="0.75" className="kl-draw" />
-          <line x1="0" y1="0" x2="-94" y2="54"   stroke="#3a3f6e" strokeWidth="0.75" className="kl-draw" />
-          <line x1="0" y1="0" x2="-94" y2="-54"  stroke="#3a3f6e" strokeWidth="0.75" className="kl-draw" />
+          <line
+            x1="0"
+            y1="0"
+            x2="0"
+            y2="-108"
+            stroke="#3a3f6e"
+            strokeWidth="0.75"
+            className="kl-draw"
+          />
+          <line
+            x1="0"
+            y1="0"
+            x2="94"
+            y2="-54"
+            stroke="#3a3f6e"
+            strokeWidth="0.75"
+            className="kl-draw"
+          />
+          <line
+            x1="0"
+            y1="0"
+            x2="94"
+            y2="54"
+            stroke="#3a3f6e"
+            strokeWidth="0.75"
+            className="kl-draw"
+          />
+          <line
+            x1="0"
+            y1="0"
+            x2="0"
+            y2="108"
+            stroke="#3a3f6e"
+            strokeWidth="0.75"
+            className="kl-draw"
+          />
+          <line
+            x1="0"
+            y1="0"
+            x2="-94"
+            y2="54"
+            stroke="#3a3f6e"
+            strokeWidth="0.75"
+            className="kl-draw"
+          />
+          <line
+            x1="0"
+            y1="0"
+            x2="-94"
+            y2="-54"
+            stroke="#3a3f6e"
+            strokeWidth="0.75"
+            className="kl-draw"
+          />
 
-          <line x1="0" y1="0" x2="0"  y2="-108" stroke="#7c83fd" strokeWidth="1.5" className="kl-draw" />
-          <line x1="0" y1="0" x2="94" y2="54"   stroke="#7c83fd" strokeWidth="1.5" className="kl-draw" />
+          <line
+            x1="0"
+            y1="0"
+            x2="0"
+            y2="-108"
+            stroke="#7c83fd"
+            strokeWidth="1.5"
+            className="kl-draw"
+          />
+          <line
+            x1="0"
+            y1="0"
+            x2="94"
+            y2="54"
+            stroke="#7c83fd"
+            strokeWidth="1.5"
+            className="kl-draw"
+          />
 
-          <circle cx="0"   cy="-108" r="5" fill="#7c83fd" />
-          <circle cx="94"  cy="-54"  r="3" fill="#2a2d45" />
-          <circle cx="94"  cy="54"   r="5" fill="#7c83fd" />
-          <circle cx="0"   cy="108"  r="3" fill="#2a2d45" />
-          <circle cx="-94" cy="54"   r="3" fill="#2a2d45" />
-          <circle cx="-94" cy="-54"  r="3" fill="#2a2d45" />
+          <circle cx="0" cy="-108" r="5" fill="#7c83fd" />
+          <circle cx="94" cy="-54" r="3" fill="#2a2d45" />
+          <circle cx="94" cy="54" r="5" fill="#7c83fd" />
+          <circle cx="0" cy="108" r="3" fill="#2a2d45" />
+          <circle cx="-94" cy="54" r="3" fill="#2a2d45" />
+          <circle cx="-94" cy="-54" r="3" fill="#2a2d45" />
 
-          <circle cx="0"   cy="-66" r="6" fill="#1c1f38" stroke="#7c83fd" strokeWidth="1.5" />
-          <circle cx="57"  cy="-33" r="4" fill="#1c1f38" stroke="#7c83fd" strokeWidth="1" />
-          <circle cx="57"  cy="33"  r="6" fill="#1c1f38" stroke="#7c83fd" strokeWidth="1.5" />
-          <circle cx="0"   cy="66"  r="4" fill="#1c1f38" stroke="#7c83fd" strokeWidth="1" />
-          <circle cx="-57" cy="33"  r="4" fill="#1c1f38" stroke="#7c83fd" strokeWidth="1" />
+          <circle cx="0" cy="-66" r="6" fill="#1c1f38" stroke="#7c83fd" strokeWidth="1.5" />
+          <circle cx="57" cy="-33" r="4" fill="#1c1f38" stroke="#7c83fd" strokeWidth="1" />
+          <circle cx="57" cy="33" r="6" fill="#1c1f38" stroke="#7c83fd" strokeWidth="1.5" />
+          <circle cx="0" cy="66" r="4" fill="#1c1f38" stroke="#7c83fd" strokeWidth="1" />
+          <circle cx="-57" cy="33" r="4" fill="#1c1f38" stroke="#7c83fd" strokeWidth="1" />
           <circle cx="-57" cy="-33" r="4" fill="#1c1f38" stroke="#7c83fd" strokeWidth="1" />
 
-          <polygon points="0,-56 48,-28 48,28 0,56 -48,28 -48,-28" fill="none" stroke="#4a50a0" strokeWidth="1.5" className="kl-draw" />
-          <polygon points="0,-32 28,-16 28,16 0,32 -28,16 -28,-16" fill="none" stroke="#7c83fd" strokeWidth="1" className="kl-draw" />
+          <polygon
+            points="0,-56 48,-28 48,28 0,56 -48,28 -48,-28"
+            fill="none"
+            stroke="#4a50a0"
+            strokeWidth="1.5"
+            className="kl-draw"
+          />
+          <polygon
+            points="0,-32 28,-16 28,16 0,32 -28,16 -28,-16"
+            fill="none"
+            stroke="#7c83fd"
+            strokeWidth="1"
+            className="kl-draw"
+          />
 
           <circle r="18" fill="#131629" stroke="#3a3f6e" strokeWidth="1.5" />
           <circle r="11" fill="#7c83fd" className="kl-core" />
-          <circle r="5"  fill="#ffffff" opacity="0.9" />
+          <circle r="5" fill="#ffffff" opacity="0.9" />
         </g>
 
         <text
           className="kl-word kl-word-1"
-          x="296" y="150"
+          x="296"
+          y="150"
           fontFamily="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          fontSize="72" fontWeight="800" letterSpacing="-2" fill="#f0f2ff"
+          fontSize="72"
+          fontWeight="800"
+          letterSpacing="-2"
+          fill="#f0f2ff"
         >
           KINISIS
         </text>
         <text
           className="kl-word kl-word-2"
-          x="298" y="218"
+          x="298"
+          y="218"
           fontFamily="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          fontSize="44" fontWeight="300" letterSpacing="18" fill="#7c83fd"
+          fontSize="44"
+          fontWeight="300"
+          letterSpacing="18"
+          fill="#7c83fd"
         >
           LABS
         </text>
-        <line className="kl-word kl-word-3" x1="296" y1="232" x2="640" y2="232" stroke="#7c83fd" strokeWidth="1" />
+        <line
+          className="kl-word kl-word-3"
+          x1="296"
+          y1="232"
+          x2="640"
+          y2="232"
+          stroke="#7c83fd"
+          strokeWidth="1"
+        />
         <text
           className="kl-word kl-word-3"
-          x="298" y="258"
+          x="298"
+          y="258"
           fontFamily="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          fontSize="13" fontWeight="400" letterSpacing="3.5" fill="#555a8a"
+          fontSize="13"
+          fontWeight="400"
+          letterSpacing="3.5"
+          fill="#555a8a"
         >
           BUILD · DELIVER · SCALE
         </text>

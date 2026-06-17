@@ -38,10 +38,27 @@ function ContactForm() {
   return (
     <form className="mt-12 space-y-4" onSubmit={onSubmit}>
       <div className="grid gap-4 sm:grid-cols-2">
-        <input required name="name" placeholder="Your name" className="rounded-md border border-border bg-input/40 px-4 py-3 text-sm focus:border-primary focus:outline-none" />
-        <input required type="email" name="email" placeholder="Email address" className="rounded-md border border-border bg-input/40 px-4 py-3 text-sm focus:border-primary focus:outline-none" />
+        <input
+          required
+          name="name"
+          placeholder="Your name"
+          className="rounded-md border border-border bg-input/40 px-4 py-3 text-sm focus:border-primary focus:outline-none"
+        />
+        <input
+          required
+          type="email"
+          name="email"
+          placeholder="Email address"
+          className="rounded-md border border-border bg-input/40 px-4 py-3 text-sm focus:border-primary focus:outline-none"
+        />
       </div>
-      <textarea required name="message" rows={5} placeholder="Tell us a bit about what you're working on…" className="w-full rounded-md border border-border bg-input/40 px-4 py-3 text-sm focus:border-primary focus:outline-none" />
+      <textarea
+        required
+        name="message"
+        rows={5}
+        placeholder="Tell us a bit about what you're working on…"
+        className="w-full rounded-md border border-border bg-input/40 px-4 py-3 text-sm focus:border-primary focus:outline-none"
+      />
       <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
       <button
         type="submit"
@@ -53,9 +70,7 @@ function ContactForm() {
       {status === "success" && (
         <p className="text-sm text-primary">Thanks — your message has been sent.</p>
       )}
-      {status === "error" && (
-        <p className="text-sm text-destructive">{errorMsg}</p>
-      )}
+      {status === "error" && <p className="text-sm text-destructive">{errorMsg}</p>}
     </form>
   );
 }
@@ -64,7 +79,11 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Kinisis Labs" },
-      { name: "description", content: "Get in touch with Kinisis Labs about engineering, partnerships, or product inquiries." },
+      {
+        name: "description",
+        content:
+          "Get in touch with Kinisis Labs about engineering, partnerships, or product inquiries.",
+      },
       { property: "og:title", content: "Contact Kinisis Labs" },
     ],
   }),
@@ -93,12 +112,13 @@ function ContactPage() {
           </a>
           <div className="rounded-xl border border-border/80 bg-card/60 p-6">
             <h3 className="font-semibold">General inquiries</h3>
-            <p className="mt-2 text-sm text-muted-foreground">We aim to reply within two business days.</p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              We aim to reply within two business days.
+            </p>
           </div>
         </div>
 
         <ContactForm />
-
       </main>
       <SiteFooter />
     </div>

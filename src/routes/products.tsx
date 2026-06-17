@@ -42,12 +42,15 @@ function ProductsLayout() {
               p.to === "/products/holygrailr"
                 ? { src: holygrailrLogo, alt: "HolyGrailR — The Ultimate TCG Marketplace" }
                 : p.to === "/products/briktrade"
-                ? { src: briktradeLogo, alt: "BrikTrade — Buy, Sell & Collect LEGO" }
-                : p.to === "/products/sportfolio-cards"
-                ? { src: sportfolioLogo, alt: "Sportfolio Cards — The Global Sports Card Marketplace" }
-                : p.to === "/products/now-iq"
-                ? { src: nowiqLogo, alt: "Now-IQ" }
-                : null;
+                  ? { src: briktradeLogo, alt: "BrikTrade — Buy, Sell & Collect LEGO" }
+                  : p.to === "/products/sportfolio-cards"
+                    ? {
+                        src: sportfolioLogo,
+                        alt: "Sportfolio Cards — The Global Sports Card Marketplace",
+                      }
+                    : p.to === "/products/now-iq"
+                      ? { src: nowiqLogo, alt: "Now-IQ" }
+                      : null;
             return (
               <Link
                 key={p.to}
